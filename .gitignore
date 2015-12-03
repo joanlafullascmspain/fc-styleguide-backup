@@ -8,6 +8,17 @@ node_modules/grunt
 node_modules/gulp
 node_modules/gulp-watch
 node_modules/.bin
+node_modules/patternpack/.eslintrc
+node_modules/patternpack/.npmignore
+node_modules/patternpack/LICENSE
+node_modules/patternpack/assemble-h
+node_modules/patternpack/gruntLogHe
+node_modules/patternpack/gruntRunne
+node_modules/patternpack/gruntfile.
+node_modules/patternpack/gruntfileC
+node_modules/patternpack/node_modul
+node_modules/patternpack/package.js
+node_modules/patternpack/readme.md
 node_modules/patternpack/node_modules/assemble
 node_modules/patternpack/node_modules/autoprefixer
 node_modules/patternpack/node_modules/grunt
