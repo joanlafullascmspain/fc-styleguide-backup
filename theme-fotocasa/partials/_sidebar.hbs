@@ -1,0 +1,20 @@
+<nav class="pp-nav">
+{{#forEach this.patternStructure}}
+  <h2 class="pp-nav__heading" data-menu-header="header"><a href="#">{{this.name}}</a><svg class="re-Icon re-Icon--small" style="fill:white"><use xlink:href="../assets/images/fotocasa.sprite.svg#caret-down"/></svg></h2>
+
+  <ul>
+    {{!-- For this category write links only for pages in the same folder --}}
+    {{#withSort ../pages "data.title"}}
+    {{#contains dirname ../this.path}}
+    {{#isnt pagename "index.html"}}
+
+    <li>
+      <a href="{{relative ../../../../page.dest dest}}">{{data.title}}</a>
+    </li>
+
+    {{/isnt}}
+    {{/contains}}
+    {{/withSort}}
+  </ul>
+  {{/forEach}}
+</nav>
