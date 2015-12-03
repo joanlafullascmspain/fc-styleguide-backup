@@ -1,0 +1,382 @@
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.3);
+  }
+  35% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// sui-Card
+
+.sui-Card {
+  background-color: $c-white;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+
+  &--contentFirst {
+    .sui-Card-topContent {
+      order: 1;
+    }
+  }
+
+  &--landscape {
+    flex-direction: row;
+
+    .sui-Card-topContent {
+      flex: 1 1 auto;
+
+      img {
+        display: block;
+        max-width: 300px;
+        width: 100%;
+      }
+    }
+
+    .sui-Card-bottomContent {
+      flex: 1 1 auto;
+      padding: 0 1em 1em;
+    }
+  }
+}
+
+.sui-Card-topContent {
+  flex: 1 0 auto;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.sui-Card-bottomContent {
+  flex: 1 0 auto;
+  padding: 0 1em 1em;
+}
+
+// re-Card
+
+.re-Card {
+  @include clearfix;
+  background-color: $c-white;
+  margin: 12px 0;
+  padding-bottom: 0;
+  position: relative;
+  padding: 8px;
+  border: 1px solid $c-grey;
+
+  &-media {
+    transition: all 0.5s;
+  }
+
+  &>a {
+    color: $c-black;
+
+      &:hover {
+        text-decoration: none;
+
+          .re-Card-topcomponent-overlay {
+            background: rgba(0,0,0,0);
+          }
+
+          .sui-Card {
+            box-shadow: 0px 0px 16px 2px rgba(102,102,102,0.4);
+          }
+      }
+  }
+
+  &--compact {
+    padding: 0;
+
+    .re-Card-bumpdate {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      top: 0;
+      margin: 1rem 0 0;
+    }
+
+    .re-Card-favIcon--compact {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      border: 0;
+      flex: none;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1;
+
+      .re-Icon {
+        stroke: $c-white;
+        stroke-width: 20px;
+        width: 2rem;
+        fill: rgb(0,0,0) !important;
+        fill-opacity: 0.3;
+        transition: all 0.2s;
+        cursor: pointer;
+
+          &:hover {
+            fill: rgba(255,82,82,1) !important;
+            fill-opacity: 1 !important;
+            stroke: rgba(255,82,82,1);
+            animation: heartbeat 800ms ease-out 0s normal;
+            //stroke-opactiy: 0 !important;
+          }
+      }
+    }
+  }
+
+  &--highlighted {
+    background-color: $c-grey;
+  }
+
+  .sui-Card {
+    margin-bottom: 0;
+  }
+
+  .re-Card-meta {
+    text-align: center;
+    width: 100%;
+
+    &--highlighted {
+      color: $c-grey-light;
+    }
+
+    span {
+      padding: 0 10px;
+    }
+  }
+
+  .re-Card-ubication {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80%;
+
+    &--highlighted {
+      color: $c-grey-light;
+    }
+  }
+
+  &-footer {
+    @include clearfix; 
+    display: flex;
+
+    .re-Card-contactButton,
+    .re-Card-phone,
+    .re-Card-favIcon {
+      background-color: $c-grey;
+      border: 1px solid $c-grey;
+      padding: 10px 0;
+      text-align: center;
+      flex: 1 0 auto;
+      color: $c-grey-dark;
+      margin: 0.05rem;
+
+        &--highlighted {
+          background-color: $c-grey-light;
+          border: 1px solid $c-grey-light;
+        }
+
+        .re-Icon {
+          vertical-align: middle;
+          fill: $c-grey-dark;
+        }
+    }
+
+    .re-Card-contactButton,
+    .re-Card-favIcon {
+      transition: background .5s ease;
+    }
+
+    .re-Card-contactButton {
+      -webkit-appearance: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $c-grey-light;
+      }
+
+      &.re-Card-contactButton--highlighted:hover {
+        background-color: $c-grey;
+      }
+
+      span {
+        display: none;
+      }  
+    }
+  }
+
+  .re-Card-favIcon {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $c-grey-light;
+
+        .re-Icon {
+          fill: rgba(255,82,82,1) !important;
+          fill-opacity: 1;
+          stroke: rgba(255,82,82,0);
+          stroke-opactiy: 0 !important;
+        }
+    }
+
+    .re-Icon {
+      stroke: $c-grey-dark;
+      stroke-width: 20px;
+      fill: rgba(255,82,82,0) !important;
+      fill-opacity: 0;
+      transition: all 0.5s;
+    }
+
+    &.re-Card-favIcon--highlighted:hover {
+      background-color: $c-grey;
+    }
+
+    &--addTofavs {
+      display: block;
+      padding: 20px;
+      transition: background .5s ease;
+    }
+
+    &--faved {
+      display: block;
+      padding: 20px;
+      transition: background .5s ease;
+    }
+  }
+}
+
+.re-Card-content {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-between;
+  padding: 0;
+
+  &--highlighted {
+    background-color: $c-grey;
+  }
+}
+
+.re-Card-footer--highlighted {
+  background-color: $c-grey;
+}
+
+.sui-Card-bottomContent {
+  padding: 0;
+}
+
+.re-Card-clientlogo {
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 115px;
+}
+
+.re-Card-priceContainer {
+  color: $c-accent;
+  margin: 0;
+  text-align: center;
+
+  &--price {
+    display: inline-block;
+    position: relative;
+
+      .re-Headline {
+        display: inline-block;
+      }
+
+      .re-Card-priceContainer--price-down svg,
+      .re-Card-priceContainer--price-down + .re-Headline {
+        font-weight: 600;
+        fill: $c-black !important;
+        vertical-align: middle;
+      }
+
+
+    @media screen and (max-width: 768px){
+      float: none;
+    }
+  }
+
+  &--highlighted {
+    color: $c-grey-light;
+  }
+
+  &--price-down {
+    margin: 0;
+
+    @media screen and (max-width: 768px){
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  .re-Card-priceFrom {
+    margin-right: 7px;
+  }
+}
+
+.re-Card-label {
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 120px;
+  z-index: 1;
+}
+
+.re-Card-topcomponent {
+  position: relative;
+  overflow: hidden;
+}
+
+.re-Card-topcomponent-overlay {
+  position: absolute;
+  top:0; left: 0; right: 0;
+  height: 100%;
+  background: rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.re-Card-bumpdate {
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: -38px;
+}
+
+.re-Card-logo {
+  width: 75px;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,196 @@
+/*------------------------------------*\
+    Fotocasa Button Style
+\*------------------------------------*/
+
+.re-Button {
+	-webkit-appearance: none;
+	background: $c-white;
+	box-sizing: border-box;
+	border-color: $c-primary;
+	border-style: solid;
+	border-width: 1px;
+	color: $c-primary;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $font-family-stack;
+	font-size: 1rem;
+	font-weight: 300;
+	height: 3rem;
+	line-height: 1rem;
+	overflow: visible; // fix horizontal space in tag button, ie
+	padding: 1rem 1.5rem;
+	position: relative;
+	text-align: center;
+  	text-decoration: none;
+  	vertical-align: middle;
+  	white-space: nowrap;
+  	transition: all 0.2s ease-out;
+
+  	svg {
+  		vertical-align: top;
+  		margin-right: 4px;
+  		fill: $c-primary;
+  	}
+	
+	&:hover {
+	    background: $c-primary-light;
+	    border-color: transparent;
+	    text-decoration: none !important;
+	}
+
+
+	&--small {
+		font-size: .875rem;
+		line-height: 1.200rem;
+		padding: .500rem .750rem;
+		height: 2.375rem;
+	}
+
+	&--disabled {
+		background: $c-grey;
+		color: $c-grey-dark;
+		cursor: default;
+		border: 1px solid $c-grey;
+
+			&:hover {
+				background: $c-grey;
+				border: 1px solid $c-grey;
+			}
+	}
+
+	&--primary {
+	    background: $c-primary;
+	    border-color: $c-primary;
+	    color: $c-white;
+	    
+	    &:hover {
+	    	background: $c-primary-dark;
+	    }
+
+	    svg {
+  			fill: $c-white;
+  		}
+	}
+
+	&--accent {
+		font-size: 1.250rem;
+		line-height: 1.500rem;
+		height: 3.875rem;
+	    background: $c-accent;
+	    border-color: $c-accent;
+	    color: $c-white;
+	    
+	    &:hover {
+			background: $c-accent-dark;
+	    }
+
+	    svg {
+  			fill: $c-white;
+  		}
+	}
+
+	&--full {
+		display: block;
+		width: 100%;
+	}
+
+	&-list {
+		display: inline-flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+
+			li {
+				flex: 1 1 auto;
+
+				button,
+				a {
+					border-left-width: 1px;
+					border-bottom-width: 0;
+				}
+			}
+
+			li:last-child {
+				button,
+				a {
+					border-bottom-width: 1px;
+				}
+			}
+
+			&--full {
+				display: flex;
+				flex-direction: column;
+
+				li {
+					flex: 1 1 auto;
+					
+					button,
+					a {
+						width: 100%;
+						border-left-width: 1px;
+						border-bottom-width: 0;
+					}
+				}
+
+				li:last-child {
+					button,
+					a {
+						border-bottom-width: 1px;
+					}
+				}
+			}
+	}
+}
+
+@media screen and (min-width: 500px) {
+
+	.re-Button {
+		
+		&-list {
+		flex-direction: row;
+
+			li {
+
+				button,
+				a {
+					border-left-width: 0;
+					border-bottom-width: 1px;
+				}
+			}
+
+			li:first-child {
+				button,
+				a {
+					border-left-width: 1px;
+				}
+			}
+
+			&--full {
+				display: flex;
+				flex-direction: row;
+
+				li {
+					flex: 1 1 auto;
+					
+					button,
+					a {
+						border-left-width: 0;
+						border-bottom-width: 1px;
+					}
+				}
+
+				li:first-child {
+					button,
+					a {
+						border-left-width: 1px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+	
+
+

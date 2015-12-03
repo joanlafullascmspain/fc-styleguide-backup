@@ -1,0 +1,59 @@
+//New Color Palette
+
+$c-primary:				#42A5F5;
+$c-primary-dark:		#1565C0;
+$c-primary-light:		#95DEF7;
+
+$c-white:				#ffffff;
+$c-black:				#424242;
+$c-grey:				#E0E0E0;
+$c-grey-medium:			#999999;
+$c-grey-dark:			#757575;
+$c-grey-light:			#F5F5F5;
+$c-green:				#83b274;
+$c-violet:				#9779c2;			
+
+$c-accent:				#FF5252;
+$c-accent-dark:			#D32F2F;
+
+// Base Fonts
+$font-family: "OpenSans";
+$font-family-stack: $font-family, sans-serif;
+$font-base-url: "http://images.fotocasa.es/inmesp/webfonts/";
+$font-family-light-url: $font-base-url + "opensans-light-webfont.woff";
+$font-family-regular-url: $font-base-url + "opensans-regular-webfont.woff";
+$font-family-semibold-url: $font-base-url + "opensans-semibold-webfont.woff";
+
+@font-face {
+    font-family: $font-family;
+    src: url($font-family-light-url) format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: $font-family;
+    src: url($font-family-regular-url) format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: $font-family;
+    src: url($font-family-semibold-url) format('woff');
+    font-weight: 700;
+}
+
+//Text Sizes
+$base-size: 16px;
+
+//Headings
+$display1:		3.500rem;
+$display2: 		2.813rem;
+$headline:		2.125rem;
+$title:			1.500rem;
+$subhead:		1.250rem;
+
+//Body
+$caption: 		0.750rem;
+		
+
+$page-width: 960px;

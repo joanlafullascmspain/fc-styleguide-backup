@@ -1,0 +1,122 @@
+// SUSY GRID SYSTEM
+// ----------------------------------------------------------------------------
+// http://susy.oddbird.net/
+//@import '../vendor/susy/susy';
+
+
+// DEFAULT SETTINGS
+// --------------------------------------------------------
+// $susy: (
+//   flow: ltr,
+//   math: fluid,
+//   output: float,
+//   gutter-position: after,
+//   container: auto,
+//   container-position: center,
+//   columns: 4,
+//   gutters: .25,
+//   column-width: false,
+//   global-box-sizing: content-box,
+//   last-flow: to,
+//   debug: (
+//     image: hide,
+//     color: rgba(#66f, .25),
+//     output: background,
+//     toggle: top right,
+//   ),
+//   use-custom: (
+//     background-image: true,
+//     background-options: false,
+//     box-sizing: true,
+//     clearfix: false,
+//     rem: true,
+//   )
+// );
+
+
+// CUSTOM SETTINGS
+// --------------------------------------------------------
+
+$re-mobile: 320px;
+$re-mobile-landscape: 480px;
+$re-tablet: 768px;
+$re-desktop: 970px;
+
+
+$susy: (
+  container: 63em,
+  columns: 12,
+  column-width: 4.5em,
+  gutter-position: 'inside-static',
+);
+
+
+.re-Grid {
+  @include container;
+  padding: 0 (gutter() * 2);
+
+
+  // GRID CLASSES
+  // --------------------------------------------------------
+  &-row {
+    @include clearfix;
+    margin-left: -(gutter());
+    margin-right: -(gutter());
+  }
+
+  // SMALL GRID
+  // ------------------------------------
+  @for $i from 1 through map-get($susy, columns) {
+    &-col--sm-#{$i},
+    &-col--md-#{$i} {
+      @include span(map-get($susy, columns));
+    }
+  }
+
+  @for $i from 1 through map-get($susy, columns) {
+    &-col--xs-#{$i} {
+      @include span($i);
+    }
+  }
+
+
+  // MEDIUM GRID
+  // ------------------------------------
+  @media screen and (min-width: $re-tablet) {
+    @for $i from 1 through map-get($susy, columns) {
+      &-col--sm-#{$i} {
+        @include span($i);
+      }
+    }
+  }
+
+  // LARGE GRID
+  // ------------------------------------
+  @media screen and (min-width: $re-desktop) {
+    @for $i from 1 through map-get($susy, columns) {
+      &-col--md-#{$i} {
+        @include span($i);
+      }
+    }
+  }
+
+  // PUSH CLASSES
+  // --------------------------------------------------------
+  @media screen and (min-width: $re-tablet) {
+    @for $i from 1 through map-get($susy, columns) {
+      &-push--#{$i} {
+        @include push($i);
+      }
+    }
+  }
+
+  // PULL CLASSES
+  // --------------------------------------------------------
+  @media screen and (min-width: $re-tablet) {
+    @for $i from 1 through map-get($susy, columns) {
+      &-pull--#{$i} {
+        @include push($i);
+      }
+    }
+  }
+}

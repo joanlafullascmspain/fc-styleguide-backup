@@ -1,0 +1,23 @@
+{
+  "name": "fotocasa-design-system",
+  "description": "Fotocasa design system",
+  "version": "1.0.11",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "latest",
+    "gulp": "^3.9.0",
+    "gulp-watch": "^4.3.5",
+    "patternpack": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sergiojimenez/Fotocasa-Design-System.git"
+  },
+  "author": "fotocasa",
+  "contributors": [
+    "fotocasa"
+  ],
+  "keywords": [
+    "fotocasa-design-system"
+  ]
+}

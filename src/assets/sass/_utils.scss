@@ -1,0 +1,43 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin ellipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin baseline-grid( $line-height:24 ) {
+
+    position: relative;
+
+    &:after {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        z-index: 9999;
+        content: '';
+        display: block;
+        pointer-events: none;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url(http://basehold.it/image.php?height=#{$line-height}) repeat top left;
+    }
+
+    &:active:after {
+        display: none;
+    }
+
+}

@@ -1,0 +1,45 @@
+# PatternPack Example Library specific
+src/assets/css/patterns.css*
+src/assets/sass/*patternpack-patterns.scss
+src/assets/less/*patternpack-patterns.less
+
+# Project directories
+node_modules/grunt
+node_modules/gulp
+node_modules/gulp-watch
+node_modules/.bin
+node_modules/patternpack/node_modules/assemble
+node_modules/patternpack/node_modules/autoprefixer
+node_modules/patternpack/node_modules/grunt-bump
+node_modules/patternpack/node_modules/grunt-collection
+node_modules/patternpack/node_modules/grunt-concurrent
+node_modules/patternpack/node_modules/grunt-contrib-clean
+node_modules/patternpack/node_modules/grunt-contrib-connect
+node_modules/patternpack/node_modules/grunt-contrib-copy
+node_modules/patternpack/node_modules/grunt-contrib-less
+node_modules/patternpack/node_modules/grunt-contrib-watch
+node_modules/patternpack/node_modules/grunt-git
+node_modules/patternpack/node_modules/grunt-postcss
+node_modules/patternpack/node_modules/grunt-sass
+node_modules/patternpack/node_modules/grunt-sass-globbing
+node_modules/patternpack/node_modules/load-grunt-parent-tasks
+node_modules/patternpack/node_modules/lodash
+node_modules/patternpack/node_modules/merge-defaults
+node_modules/patternpack/node_modules/mkdirp
+node_modules/patternpack/node_modules/pixrem
+node_modules/patternpack/node_modules/pretty
+node_modules/patternpack/node_modules/grunt-newer
+node_modules/patternpack/node_modules/patternpack-example-theme/node_modules
+node_modules/patternpack/node_modules/theme-fotocasa/node_modules
+
+bower_components/
+html/
+g
+# OS & project generated files
+*.orig
+*.log
+.log
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db

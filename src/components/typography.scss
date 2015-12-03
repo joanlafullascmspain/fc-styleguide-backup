@@ -1,0 +1,231 @@
+//GLOBAL
+
+//Vertical Rythm
+
+html {
+	font-size: $base-size;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+body {
+	//@include baseline-grid(24);
+	color: $c-black;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+}
+
+.re-Ellipsis {
+	@include ellipsis;
+}
+
+.vertical_grid:after {
+	position: absolute;
+    width: auto;
+    height: 100%;
+    z-index: 9999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(http://basehold.it/image.php?height=24) repeat top left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl {
+  margin-top: 0;
+}
+
+//HEADING
+
+h1, h2, h3 {
+	font-weight: 300;
+	
+}
+
+h1,
+.re-Headline {
+	font-size: $headline;
+	color: $c-grey-dark;
+	line-height: 1.5rem;
+	margin: 1.5rem 0;
+}
+
+h2,
+.re-Title {
+	font-size: $title;
+	color: $c-black;
+	line-height: 1.5rem;
+	margin: 1.5rem 0;
+}
+
+h3,
+.re-Subhead {
+	font-size: $subhead;
+	color: $c-black;
+	line-height: 1.5rem;
+	margin: 1.5rem 0;
+}
+
+.re-Display-1,
+.re-Display-2 {
+	color: $c-grey-dark;
+	margin: .5rem 0 2rem;
+	line-height: 3rem;
+}
+
+.re-Display-1 {
+	font-size: $display1;
+}
+
+.re-Display-2 {
+	font-size: $display2;
+}
+
+.re-Heading-compact {
+	margin: .5rem 0;
+}
+
+//PARAGRAPH
+
+p {
+	line-height: 1.500rem;
+	margin-bottom: 1.500rem;
+}
+
+//MODIFIERS WEIGHT
+b,
+strong {
+	font-weight: 600;
+}
+
+.re-Caption {
+	color: $c-grey-medium;
+}
+
+.re-Bold {
+	font-weight: 600;
+}
+
+.re-Regular {
+	font-weight: 400;
+}
+
+.re-Light {
+	font-weight: 300;
+}
+
+//MODIFIERS SIZE
+
+.re-Small {
+	font-size: $caption;
+}
+
+//Listas
+
+.re-List {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+	> li {
+		margin-bottom: 6px;
+	}
+
+	&--bullet {
+		list-style-type: disc;
+		list-style-position: inside;
+	}
+
+	&--ordered {
+		list-style-type: decimal;
+		list-style-position: inside; 
+	}
+
+	&--inline {
+		li {
+			display: inline-block;
+			padding-right: 8px;
+			margin-right: 8px;
+
+			&:last-child {
+				margin-right: 0;
+				padding-right: 0;
+			}
+		}
+
+		&-separator {
+			li {
+				display: inline-block;
+				border-right: 2px solid $c-grey;
+				padding-right: 8px;
+				margin-right: 8px;
+
+				&:last-child {
+					border: 0;
+					border: none;
+					margin-right: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+
+//Links
+
+a,
+.re-As-link {
+	color: $c-primary;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+a.re-Link {
+
+	&--disabled {
+		color: $c-grey;
+		pointer-events: none;
+   		cursor: default;
+
+		&:hover {
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+
+	&--icon-left,
+	&--icon-right {
+		fill: $c-primary;
+		vertical-align: middle;
+	}
+
+	&--icon-left {
+		svg {
+			padding-right: 4px;
+		}	
+	}
+
+	&--icon-right {
+		svg {
+			padding-left: 4px;
+		}	
+	}
+}
