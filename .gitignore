@@ -10,6 +10,7 @@ node_modules/gulp-watch
 node_modules/.bin
 node_modules/patternpack/node_modules/assemble
 node_modules/patternpack/node_modules/autoprefixer
+node_modules/patternpack/node_modules/grunt
 node_modules/patternpack/node_modules/grunt-bump
 node_modules/patternpack/node_modules/grunt-collection
 node_modules/patternpack/node_modules/grunt-concurrent
@@ -18,18 +19,21 @@ node_modules/patternpack/node_modules/grunt-contrib-connect
 node_modules/patternpack/node_modules/grunt-contrib-copy
 node_modules/patternpack/node_modules/grunt-contrib-less
 node_modules/patternpack/node_modules/grunt-contrib-watch
+node_modules/patternpack/node_modules/grunt-eslint
 node_modules/patternpack/node_modules/grunt-git
+node_modules/patternpack/node_modules/grunt-newer
 node_modules/patternpack/node_modules/grunt-postcss
 node_modules/patternpack/node_modules/grunt-sass
 node_modules/patternpack/node_modules/grunt-sass-globbing
 node_modules/patternpack/node_modules/load-grunt-parent-tasks
+node_modules/patternpack/node_modules/load-grunt-tasks
 node_modules/patternpack/node_modules/lodash
 node_modules/patternpack/node_modules/merge-defaults
 node_modules/patternpack/node_modules/mkdirp
 node_modules/patternpack/node_modules/pixrem
 node_modules/patternpack/node_modules/pretty
 node_modules/patternpack/node_modules/grunt-newer
-node_modules/patternpack/node_modules/patternpack-example-theme/node_modules
+node_modules/patternpack/node_modules/patternpack-example-theme/
 node_modules/patternpack/node_modules/theme-fotocasa/node_modules
 
 bower_components/
